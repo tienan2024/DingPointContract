@@ -1,0 +1,95 @@
+<resources>
+    <string name="h">Analysis history</string>
+    <string name="app_name">Dingdian Contract</string>
+    <string name="settings">Settings</string>
+    <string name="ContractCreateFragment">Contract Create</string>
+    <string name="ContractManageFragment">Contract Manage</string>
+    <string name="RiskEvaluateFragment">Risk Evaluate</string>
+    <string name="ProfileFragment">Profile</string>
+    <string name="SettingsFragment">Settings</string>
+
+    <string name="HomeFragment">Home</string>
+    <string name="HomeSearch">Search</string>
+    <string name="HomeExpert">Expert</string>
+    <string name="HomeInterpretation">Interpretation</string>
+    <string name="HomeTemplate">Template</string>
+    <string name="HomeCreation">Creat</string>
+    <string name="HomeAnalysis">Analysis</string>
+    <string name="HomeVideo">Video</string>
+
+    <string name="ForumFragment">Forum</string>
+    <string name="CMopen">Open</string>
+    <string name="CMdelete">Delete</string>
+    <string name="CMuploadcontract">Upload Contract</string>
+    <string name="REselectfile">Select File</string>
+    <string name="REaianalysis">AI Intelligent Analysis</string>
+    <string name="tips">The language settings have been updated, please reopen the app to complete the settings</string>
+    <string name="CCDownloadtemplate">Download</string>
+    <string name="input_question_hint">Please enter your question</string>
+    <string name="ask_question">Ask</string>
+    <string name="profile_avatar">Avatar</string>
+    <string name="profile_name">Username</string>
+    <string name="profile_settings">Settings</string>
+    <string name="profile_language">Language</string>
+    <string name="profile_about">About Us</string>
+    <string name="profile_feedback">Feedback</string>
+    <string name="risk_evaluation_title">Risk Evaluation</string>
+    <string name="upload_file">Upload File</string>
+    <string name="input">Enter contract content or select file...</string>
+    <string name="language_changed">Please close the application to implement the language change</string>
+    <string name="about">About</string>
+    <string name="about_message">
+power by jzd.     -----last time 2025/5/16.\n
+After three months, this project has been restarted XD.
+Regarding AI access, this software uses the API to call the deepseek-v3 model.
+Regarding the fraud coefficient, there is no specific calculation formula; it simply requires the model to output a coefficient determined by the model itself.
+Details are as follows:
+You are a professional contract review assistant. Please analyze potential risks in the contract in Chinese and provide a fraud risk coefficient (0 to 100) based on the contract content.
+The format is as follows: \n\n" +
+"🔥【Fraud Risk Coefficient】XX/100\n\n" +
+"⚠️【Risk Summary】\n" + "Multiple abnormal clauses detected, primarily involving excessive unilateral rights, excessively high penalty ratios, and vague liability definitions.\n\n" +
+"🔍【Detailed Analysis】\n" +
+"🔴 Risk Type: Unilateral Interpretation Clause\n" +
+"🔵 Clause Location: Article 12\n" +
+"🟡 Risk Description: Grants Party A the unilateral right to interpret the contract\n" +
+"🟢 Modification Suggestion: Change to \"both parties shall negotiate and agree on the interpretation of contract clauses\"\n");
+
+Update v1.5:
+1: Unified the art style, primarily featuring blue and purple.
+2: Disabled the original Create Contract and Manage Contract fragments in the bottom navigation bar; they will later be moved to the top hex grid on the homepage.
+3: Added a homepage and forum.
+4: Added a splash screen advertisement and created a poster for it.
+5: Integrated the original Settings fragment into the existing "Me" interface.
+6: Reset the original data storage logic, switching to SQLite for unified storage of contracts and related files.
+
+Bug Fined:
+1: Model switching in risk assessment still fails; deepseek-R1 cannot be accessed, while deepseek-v3 works normally.
+2: Art resource management is chaotic, which may pose potential risks.
+
+Update v1.4:
+1: Added a sidebar to the risk assessment interface, including a feature to view chat history.
+2: Added a progress bar to the risk assessment interface.
+3: Added some error prompts.
+4: Added an Easter egg.
+
+Important! This software is only a demo and has no encryption. All consequences of data loss are at your own risk.</string>
+    <string name="language">Language</string>
+    <string name="title_select_template">Select Template</string>
+    <string name="button_download_template">Download Template</string>
+    <string name="button_open_template">Open Template</string>
+    <string name="toast_please_select_template">Please select a template first</string>
+    <string name="toast_load_template_failed">Failed to load templates</string>
+    <string name="toast_download_successful">%1$s has been downloaded</string>
+    <string name="toast_download_failed">Download failed</string>
+    <string name="toast_file_not_exist">File does not exist, please download first</string>
+    <string name="toast_open_file_failed">Failed to open the file</string>
+    <string name="selecthint">Please enter file name</string>
+    <string name="endaianalysis">Start Analysis</string>
+    <string name="prompt_input_or_upload">Please enter contract content or upload a file</string>
+    <string name="file_loaded">File content has been loaded</string>
+    <string name="file_read_failed">Failed to read file: %s</string>
+    <string name="request_failed">Request failed: %d</string>
+    <string name="analysis_failed">Analysis failed: %s</string>
+    <string name="analyzing">Analyzing...</string>
+
+</resources>

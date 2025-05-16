@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="internal_files"
+        path="." />
+    <!-- 你也可以添加其他路径 -->
+    <external-files-path name="contract_library" path="Documents/已上传合同库/" />
+</paths>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginVertical="20dp"
+    android:padding="20dp"
+
+    android:background="@color/white">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_title_bg"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/title_select_template"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RecyclerView 展示模板列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/templateRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:background="@drawable/recycler_view_background"/>
+
+    <!-- 按钮布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <!-- 下载按钮 -->
+        <Button
+            android:id="@+id/downloadButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="@string/CCDownloadtemplate"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginEnd="8dp"
+            android:elevation="4dp"/>
+
+        <!-- 打开按钮 -->
+        <Button
+            android:id="@+id/openButton"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="@string/CMopen"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:elevation="4dp"/>
+    </LinearLayout>
+</LinearLayout>
