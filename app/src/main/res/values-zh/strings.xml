@@ -32,7 +32,7 @@
 
     <string name="ProfileFragment">我的</string>
     <string name="profile_avatar">头像</string>
-    <string name="profile_name">用户名</string>
+    <string name="profile_name">管理员</string>
     <string name="profile_settings">设置</string>
     <string name="profile_language">语言</string>
     <string name="profile_about">关于我们</string>
@@ -44,7 +44,7 @@
     <string name="about">关于</string>
 
     <string name="about_message">
-power by jzd。     -----last time 2025/5/16。\n
+power by jzd。     -----last time 2025/5/17。\n
 时隔三个月这个项目又重启了XD
 关于访问ai，本软件采用api调用deepseek-v3模型，
 关于诈骗系数，没有具体计算公式，只是要求模型输出一个模型自己定的一个系数。
@@ -59,6 +59,22 @@ power by jzd。     -----last time 2025/5/16。\n
 "🟡 风险说明：赋予甲方单方面解释合同的权利\n" +
 "🟢 修改建议：改为\"双方协商一致解释合同条款\"\n");
 
+Update v1.7：
+1：为首页六宫格添加了对应的fragment空白界面。
+2：完善了法条解读界面，实现了折叠查询，阅读的功能。
+3：完善了搜索功能，实现了对搜索到的法条解读目标进行跳转，阅读的功能。
+4：修复了一些文本错误。
+5：双语版本暂时搁置。
+
+Update v1.6：
+1：实现了搜索功能。
+*实现方法：使用sqllite数据库，将法条解读，合同模板，创建的合同存入数据库（合同模板与创建的合同通常不适合以文本转化为二进制文件的形式存入数据库，故此类文件只存入其文件地址），
+通过创建索引的方式实现不同功能分区的数据可以一次性被搜索出来。
+2：添加了搜索动画，实现了类浏览器搜索框风格。
+3：新增了一些论坛文本，以体现app特色。
+4：补充了部分美术资源。
+5：关于我已经开源至GitHub仓库但至今访问量为0这庄子事，本程序猿十分不满。
+
 Update v1.5：
 1：统一了美术风格，整体以蓝色与紫色为主。
 2：停用了原先底部导航栏中的创建合同与管理合同fragment，之后将会移动至首页顶部六宫格
@@ -67,7 +83,7 @@ Update v1.5：
 5：整合了原来的设置fragment，将其合并入现有的“我的”界面。
 6：重置了原来的数据存储逻辑，改为sqllite统一存储合同与相关文件。
 
-bug fined：
+bug find：
 1：关于风险评估中的模型切换任然失败，无法访问deepseek-R1，deepseek-v3可正常访问。
 2：美术资源管理混乱，可能存在隐患。
 

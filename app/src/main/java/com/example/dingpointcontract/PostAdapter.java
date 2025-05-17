@@ -35,6 +35,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.commentCount.setText(String.valueOf(post.getCommentCount()));
         holder.shareCount.setText(String.valueOf(post.getShareCount()));
 
+        // 设置用户头像
+        holder.avatar.setImageResource(post.getAvatarResId());
+
         // 如果有图片，显示图片
         if (post.getImageUrl() != null && !post.getImageUrl().isEmpty()) {
             holder.postImage.setVisibility(View.VISIBLE);
@@ -66,6 +69,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         TextView likeCount;
         TextView commentCount;
         TextView shareCount;
+
+
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);

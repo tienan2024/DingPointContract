@@ -37,6 +37,16 @@ public class ContractCreateFragment extends Fragment {
         TextView titleText = view.findViewById(R.id.titleText);
         titleText.setText(getString(R.string.title_select_template));
 
+
+        // 添加返回箭头和点击事件
+        titleText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_chevron_right_24, 0, 0, 0);
+        titleText.setCompoundDrawablePadding(8);
+        titleText.setOnClickListener(v -> {
+            // 返回上一页
+            getParentFragmentManager().popBackStack();
+        });
+
+
         templateRecyclerView = view.findViewById(R.id.templateRecyclerView);
         templateRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 

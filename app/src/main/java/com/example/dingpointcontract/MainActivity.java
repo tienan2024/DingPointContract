@@ -73,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void switchFragment(Fragment targetFragment) {
+        // 清除后退栈中的所有子Fragment
+        clearBackStack();
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (!targetFragment.isAdded()) {
             transaction.add(R.id.fragment_container, targetFragment);
@@ -81,5 +84,28 @@ public class MainActivity extends AppCompatActivity {
         transaction.show(targetFragment);
         transaction.commit();
         mCurrentFragment = targetFragment;
+    }
+
+    /**
+     * 清除后退栈中所有Fragment
+     */
+    private void clearBackStack() {
+        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+        for (int i = 0; i < backStackCount; i++) {
+            getSupportFragmentManager().popBackStackImmediate();
+        }
+    }
+
+    /**
+     * 处理返回键逻辑
+     */
+    @Override
+    public void onBackPressed() {
+        // 如果后退栈中有Fragment，优先弹出
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
