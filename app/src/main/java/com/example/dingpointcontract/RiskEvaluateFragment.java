@@ -43,7 +43,7 @@ public class RiskEvaluateFragment extends Fragment {
 
     private static final int FILE_PICK_REQUEST = 1001;
     private static final String API_URL = "https://api.deepseek.com/v1/chat/completions";
-    private static final String API_KEY = "sk-c74d938a096b474fb162cf96e3e03517";
+    private static final String API_KEY = "你自己的key";
     private static final String TAG = "RiskEvaluate";
 
     // 模型常量
